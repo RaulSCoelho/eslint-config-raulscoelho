@@ -1,10 +1,17 @@
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  extends: ['standard', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import', 'import-helpers'],
+  env: {
+    es2021: true,
+    node: true
+  },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
   rules: {
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-img-element': 'off',
+    'no-useless-constructor': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'prettier/prettier': [
       'error',
@@ -23,9 +30,14 @@ module.exports = {
       'warn',
       {
         newlinesBetween: 'always', // new line between groups
-        groups: ['/^react/', 'module', ['parent', 'sibling', 'index']],
+        groups: ['module', ['parent', 'sibling', 'index']],
         alphabetize: { order: 'asc', ignoreCase: true }
       }
     ]
+  },
+  settings: {
+    'import/parsers': {
+      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts']
+    }
   }
 }

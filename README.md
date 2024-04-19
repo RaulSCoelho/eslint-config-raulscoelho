@@ -17,3 +17,16 @@ Inside `.eslintrc.json`
   ]
 }
 ```
+
+### Node.js
+
+Install dependencies:
+```
+npm i -D eslint @raulscoelho/eslint-config
+```
+Inside `.eslintrc.json`
+```
+{
+  "extends": "@raulscoelho/eslint-config/node"
+}
+```
