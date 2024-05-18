@@ -4,8 +4,9 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import', 'import-helpers'],
   rules: {
     'react/no-unescaped-entities': 'off',
-    '@next/next/no-img-element': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'prettier/prettier': [
       'error',
       {
