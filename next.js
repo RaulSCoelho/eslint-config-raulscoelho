@@ -4,9 +4,10 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import', 'import-helpers'],
   rules: {
     'react/no-unescaped-entities': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    "@typescript-eslint/ban-ts-comment": "off",
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
     'prettier/prettier': [
       'error',
       {

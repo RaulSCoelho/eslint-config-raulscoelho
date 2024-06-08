@@ -12,6 +12,7 @@ module.exports = {
   },
   rules: {
     'no-useless-constructor': 'off',
+    "@typescript-eslint/ban-ts-comment": "off",
     '@typescript-eslint/no-unused-vars': 'error',
     'prettier/prettier': [
       'error',
